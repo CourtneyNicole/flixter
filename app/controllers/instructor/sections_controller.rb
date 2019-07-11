@@ -4,13 +4,15 @@ class Instructor::SectionsController < ApplicationController
 
 
   def new
+    @course = Course.find(params[:course_id])
     @section = Section.new
   end
 
-  def create 
+   def create
+    @course = Course.find(params[:course_id])
     @section = @course.sections.create(section_params)
-    redirect_to instructor_course_path(current_course)
-end
+    redirect_to instructor_course_path(@course)
+  end
 
 private
 

@@ -16,7 +16,7 @@ private
 
 def require_authorized_for_current_section
   if current_section.course.user != current_user
-    return render plain: 'Unauthorized', status: :Unauthorized
+     render plain: 'Unauthorized', status: :Unauthorized
   end
 end
 
@@ -27,7 +27,7 @@ def current_section
   end
 
 def lesson_params
-  params.require(:lesson).permit(:title, :subtitle)
+  params.require(:lesson).permit(:title, :subtitle, :video)
 end 
 
 end

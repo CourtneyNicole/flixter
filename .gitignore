@@ -28,3 +28,11 @@
 
 # Ignore application configuration
 /config/application.yml
+
+AWS_ACCESS_KEY "AKIA52TCYIHWZDBQ6BFU"
+AWS_SECRET_KEY "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"
+AWS_BUCKET     "bucketflixter"
+
+
+SECRET_KEY 'sk_test_aGIjNx1m6tWkY0h1ismYouFx007m6ZadbJ'
+PUBLISHABLE_KEY 'pk_test_JdKzTsVYIyah6qWOHSW68QWm00BjCzBPbF'

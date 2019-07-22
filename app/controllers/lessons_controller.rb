@@ -5,18 +5,18 @@ class LessonsController < ApplicationController
   def show 
   end
 
-private
+  private
 
 def require_authorized_for_current_lesson
-    if current_lesson.section.course.user != current_user
-      render redirect_to root_url, alert: 'Must be enrolled to view this page'
+  if current_lesson.section.course.user != current_user
+    render redirect_to root_url, alert: 'Must be enrolled to view this page'
   end
+end
 
-
-helper_method :current_lesson
+  helper_method :current_lesson
 def current_lesson
   @current_lesson ||= Lesson.find(params[:id])
-
 end
+
 end
 
